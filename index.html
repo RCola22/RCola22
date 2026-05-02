@@ -911,6 +911,68 @@ footer {
   .scroll-indicator { display: none; }
 }
 
+/* ── CAREER PATH PREVIEW ── */
+.career-path-card { padding-bottom: 20px; }
+
+.project-preview {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  background: #0d0d1a;
+}
+
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.preview-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.project-preview:hover img { transform: scale(1.03); }
+
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, transparent 60%, rgba(22,29,46,0.7) 100%);
+  cursor: default;
+}
+
+.btn-live {
+  background: rgba(16,185,129,0.15);
+  border: 1px solid rgba(16,185,129,0.4);
+  color: #34d399 !important;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px !important;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-live:hover { background: rgba(16,185,129,0.25); transform: translateY(-1px); gap: 4px !important; }
+
+.btn-gh {
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.4);
+  color: #a5b4fc !important;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px !important;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-gh:hover { background: rgba(99,102,241,0.25); transform: translateY(-1px); gap: 4px !important; }
+
 @media (max-width: 480px) {
   .hero h1 { font-size: 26px; }
   .hero-title { font-size: 14px; }
@@ -1145,15 +1207,25 @@ footer {
         </div>
       </div>
 
-      <div class="project-card">
-        <span class="project-icon">&#x1F504;</span>
-        <h3>Automated Sandbox Refresh Pipeline</h3>
-        <p>Built an automated sandbox refresh and seeding workflow that cut environment setup time from days to hours. Integrated data masking, permission resets, and post-refresh validation scripts.</p>
+      <div class="project-card career-path-card">
+        <h3>The Career Path Framework</h3>
+        <p>A step-by-step interactive playbook for getting the job you want — skill stacking, interview prep, offers & negotiation, and more.</p>
         <div class="chips" style="margin-bottom:16px">
-          <span class="chip">SFDX CLI</span><span class="chip">Python</span><span class="chip">Automation</span>
+          <span class="chip">Career Dev</span><span class="chip">Skill Stacking</span><span class="chip">Job Search</span>
+        </div>
+        <div class="project-preview">
+          <a href="https://rcola22.github.io/career-path-guide/#skill-stack" target="_blank" class="preview-link">
+            <img
+              src="https://image.thum.io/get/width/600/crop/380/https://rcola22.github.io/career-path-guide/"
+              alt="Career Path Framework Preview"
+              loading="lazy"
+            />
+            <div class="preview-overlay"></div>
+          </a>
         </div>
         <div class="project-links">
-          <a href="#" class="proj-link">Case Study &rarr;</a>
+          <a href="https://rcola22.github.io/career-path-guide/#skill-stack" target="_blank" class="proj-link btn-live">&#x1F7E2; Live &rarr;</a>
+          <a href="https://github.com/RCola22/career-path-guide/blob/main/career-path-guide.md" target="_blank" class="proj-link btn-gh">&#x1F4BB; GitHub &rarr;</a>
         </div>
       </div>
 
@@ -1165,7 +1237,7 @@ footer {
           <span class="chip">Salesforce Reports</span><span class="chip">Flows</span><span class="chip">LWC</span>
         </div>
         <div class="project-links">
-          <a href="#" class="proj-link">Learn More &rarr;</a>
+          <a href="release-dashboard.html" target="_blank" class="proj-link btn-live">&#x1F4CA; View Dashboard &rarr;</a>
         </div>
       </div>
     </div>
