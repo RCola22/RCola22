@@ -911,6 +911,29 @@ footer {
   .scroll-indicator { display: none; }
 }
 
+/* ── DIAGONAL RIBBON ── */
+.project-card--ribbon { overflow: hidden; }
+
+.ribbon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: linear-gradient(90deg, var(--indigo), var(--purple));
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: 0 2px 16px rgba(99,102,241,0.5);
+  pointer-events: none;
+  z-index: 10;
+}
+
 /* ── CAREER PATH PREVIEW ── */
 .career-path-card { padding-bottom: 20px; }
 
@@ -1229,7 +1252,8 @@ footer {
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card project-card--ribbon">
+        <div class="ribbon">Dashboard in Work</div>
         <span class="project-icon">&#x1F4CA;</span>
         <h3>Release Governance Dashboard</h3>
         <p>Custom Salesforce dashboard and reporting suite giving release managers real-time visibility into deployment status, environment health, change backlogs, and audit trails across all orgs.</p>
